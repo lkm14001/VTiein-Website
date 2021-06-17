@@ -1,0 +1,293 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Big Shoulders Stencil Display';
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    height:100%;
+    width:100%;
+    background-image: url(../images/doctor-family.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #7EC0CD;
+}
+
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.navbar1{
+    display:flex;
+    justify-content: center;
+    height:20vh;
+    
+}
+.navbar{
+    display:flex;
+    width:80%;
+    justify-content: space-around;
+    position:fixed;
+    padding-top: 30px;
+    font-size: 35px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Big Shoulders Stencil Display';
+}
+
+.navbar img{
+    height: 80px;
+    filter:brightness(70%);
+}
+
+.navbar li{
+    padding-top: 25px;
+}
+
+.navbar li a{
+    color:white;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+
+.active{
+    border-bottom: 2px white solid;
+}
+
+a.middle{
+    position:relative;
+}
+a.middle:before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height: 2px;
+    left:0;
+    bottom:0;
+    background-color: #fff;
+    visibility: hidden;
+    transform:scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+a.middle:hover:before{
+    visibility: visible;
+    transform: scaleX(1);
+}
+.middle-container{
+    font-family: 'Big Shoulders Stencil Display';
+    display:flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.8em;
+    font-weight: bolder;
+}
+
+.middle-container h3{
+    font-size: 0.5em !important;
+    margin-left: 180px;
+    margin-bottom: 120px;
+}
+
+.lastcontainer{
+    background-image: url(../images/middle3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+    filter:contrast(80%);
+    /* background */
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    
+
+}
+.about h1{
+    font-size: 3.5em;
+    font-family: 'Big Shoulders Stencil Display';
+    letter-spacing: 1.8px;
+    text-align: center;
+
+}
+.aboutmatter{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    
+}
+
+.up p{
+    margin:10px 120px 10px 120px;
+    font-size: 2em;
+    color:black;
+    font-weight: bold;
+    margin-left: 400px;
+    font-family:'Alegreya Sans';
+    letter-spacing: 1.2px;
+    padding-bottom: 50px;
+}
+
+.down span{
+    font-size: 2em;
+    color:black;
+    font-weight: bolder;
+    font-family: "Alegreya Sans";
+    margin:10px 120px 10px 400px;
+    letter-spacing: 1.2px;
+
+}
+.down span a{
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.newletter{
+    padding-top: 3em;
+    height: 20vh;
+    font-size: 1.8em;
+    background-color: rgba(222, 184, 135,0.7);
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.news1 h2{
+    font-size: 2em !important;
+    line-height: 80px;
+}
+.news2{
+    align-self: center;
+}
+
+.news2 input,button{
+    width:300px;
+    outline: none;
+    border:none;
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height:50px;
+}
+.news2 input{
+    border:0;
+    border-radius: 0;
+    border-bottom:3px solid black;
+    
+}
+.news2 button{
+    background:rgba(128, 128, 128,0.8);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    width:200px !important;
+    border:0;
+    border-radius: 0;
+    border-bottom:3px solid black;
+}
+::placeholder{
+    font-size: 20px;
+    font-weight: 600;
+}
+input:focus{
+    border-color: green;
+}
+input:focus::placeholder{
+    color:transparent;
+    transition: text-indent 0.4s 0.4s ease; 
+    text-indent: -100%;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+    transition: text-indent 0.4s 0.4s ease; 
+    text-indent: -100%; 
+}
+
+@keyframes tieinanimation{
+    from{
+        transform: translateY(50%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+@keyframes tieinanimation2{
+    from{
+        transform: translateY(500%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+.middle-container h1{
+    animation: 1s ease-out 0s 1 tieinanimation;
+}
+
+.middle-container h3{
+    animation: 1s ease-out 0s 1 tieinanimation2;
+}
+
+footer{
+    display: flex;
+    width:100%;
+    height:30vh;
+    justify-content:space-around;
+    align-items: center;
+    background-color: rgba(240, 231, 142,0.4);
+}
+
+.logo{
+    flex-grow: 1;
+}
+.logo img{
+    width:350px;
+    height:80px;
+}
+.copyright{
+    
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    font-size: 1.2em;
+}
+.copyright h3{
+    line-height: 30px;
+}
+.copyright ul li{
+    line-height: 25px;
+}
+.copyright ul li a{
+    color:grey;
+    font-size: 1.2em;
+}
+.navigation nav ul li a{
+    color:black;
+    line-height: 35px;
+    font-size: 1.8em;
+}
+.navigation{
+    flex-grow: 1;
+}
+.socialmedia{
+    flex-grow: 2;
+    
+}
+
+.socialmedia ul{
+    display:flex;
+    justify-content: space-around;
+}
+.socialmedia h2{
+    padding-bottom: 20px;
+}
+.socialmedia ul li{
+    font-size: 45px;
+}
+.socialmedia ul li a i{
+    color:black;
+}

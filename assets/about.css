@@ -1,0 +1,94 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Big Shoulders Stencil Display';
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+.main-container{
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/about2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.superior-nav{
+    display:flex;
+    justify-content: center;
+    height:20vh;  
+}
+.navbar{
+    position:relative !important;
+}
+.navbar li a{
+    color:black !important;
+}
+
+.navbar li a.active{
+    border-bottom: 2px solid black !important;
+}
+
+a.middle:hover:before{
+    background-color: black !important;
+}
+
+.about-section{
+    display:flex;
+    flex-direction: column;
+    width:50vw;
+    margin-left: 60px;
+}
+
+.about-section{
+    padding-top:110px;
+}
+
+.about-section h1{
+    text-align: center;
+}
+.about-section .about-section1{
+    animation: toright 0.5s ease-in;
+}
+.about-section .about-section2{
+    animation: toright 0.7s ease-in;
+}
+
+.about-section .about-section3{
+    animation: toright 0.9s ease-in;
+}
+
+.about-section div h1{
+    font-size: 3.5em;
+    font-weight: bolder;
+}
+
+.about-section div p{
+    width:45vw;
+    font-size: 1.5em;
+    font-weight: 500;
+    font-family: "Alegreya Sans";
+    letter-spacing: 1px;
+    text-align: justify;
+}
+
+.about-section div{
+    padding-bottom: 50px;
+}
+
+.footer{
+    background-color: rgb(236, 236, 229) !important;
+}
+@keyframes toright{
+    0%{
+        transform:skewX(0deg) translateX(-500px);
+    }
+    100%{
+        transform:skew(0deg)
+    }
+}
